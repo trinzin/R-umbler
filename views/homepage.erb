@@ -1,0 +1,45 @@
+<h1>Hello Customers!</h1>
+<img src="/images/avatar/small/elliot.jpg">
+
+<div class="ui form" >
+    <form method="POST" action="/feed">
+        <div class="field">
+            <label>Create Post</label>
+            <input type="textarea" name="content"></input>
+        </div>
+        <button class="positive ui button" type="submit">Post</button>
+    </form>
+</div>
+
+
+<br>
+<div class="ui feed">
+
+<% for items in @posts do%>
+  <div class="event">
+    <div class="label">
+      <img src="/images/avatar/small/elliot.jpg">
+    </div>
+    <div class="content">
+      <div class="summary">
+        <a class="user">
+         UsersName should be here
+        </a> added you as a friend
+        <div class="date">
+            <%= Time.now %>
+        </div>
+      </div>
+      <div class="extra text">
+        <%= items.text %>
+        </div>
+        
+        <div class="meta">
+        <a class="like">
+        <i class="like icon"></i> 4 Likes
+        </a>
+        </div>
+        </div>
+        </div>
+        
+ <% end %>
+</div>

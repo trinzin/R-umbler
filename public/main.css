@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+body{
+    background-color:#ffe2e0;
+}
+
+.ui button{
+  position: relative;
+  right:50px,
+}
+
+h1{
+  font-family: cursive;
+}
