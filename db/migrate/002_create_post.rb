@@ -1,8 +1,8 @@
 class CreatePost < ActiveRecord::Migration[5.0]
     def up
-      create_table :post do |t|
+      create_table :posts do |t|
         t.string :text
-        t.string :user-id
+        t.integer :user_id
       end
     end
   

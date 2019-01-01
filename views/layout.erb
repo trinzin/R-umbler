@@ -5,27 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>One Inces at a Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/>
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/>
 </head>
 <body>
 
     <div class="ui container">
     <br>
-      <h1> Hello...welcome! </h1>
+      <h1> One More Set 4 Hi-Five! </h1>
       <br>
   
       <% if @user %>
-        <a href="/" class="ui primary button">
-          Home
+      <a href="/logout" class="ui primary button">
+      Logout
+      </a>
+        <a href="/logout/delete/<%=@user.id %>" class="ui primary button">
+        Delete Account
         </a>
-        <a href="/sales" class="ui primary button">
-          View All Sales
-        </a>
-        <a href="/logout" class="ui primary button">
-          Logout
-        </a>
-        HI <%= @user.email %>
+       
+        Welcome <%= @user.firstName %>
       <% else %>
         <a href="/login" class="ui primary button">
           Login
@@ -33,6 +32,7 @@
         <a href="/signup" class="ui primary button">
           Sign Up
         </a>
+        
       <% end %>
       <br>
       <br>

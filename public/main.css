@@ -4,12 +4,13 @@ h1 {
 }
 
 body{
-    background-color:#ffe2e0;
+  background-image: url("/images/shine.webp" );
+  background-size: cover;
 }
 
 .ui button{
   position: relative;
-  right:50px,
+  right:100px,
 }
 
 h1{

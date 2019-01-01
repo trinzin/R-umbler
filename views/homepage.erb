@@ -1,5 +1,5 @@
-<h1>Hello Customers!</h1>
-<img src="/images/avatar/small/elliot.jpg">
+<div class="ui star rating" data-rating="3"></div>
+
 
 <div class="ui form" >
     <form method="POST" action="/feed">
@@ -18,16 +18,17 @@
 <% for items in @posts do%>
   <div class="event">
     <div class="label">
-      <img src="/images/avatar/small/elliot.jpg">
+  
     </div>
     <div class="content">
       <div class="summary">
         <a class="user">
-         UsersName should be here
-        </a> added you as a friend
+        <%= items.user.firstName %>
+        </a> created a post
         <div class="date">
             <%= Time.now %>
         </div>
+        
       </div>
       <div class="extra text">
         <%= items.text %>
@@ -37,6 +38,9 @@
         <a class="like">
         <i class="like icon"></i> 4 Likes
         </a>
+        </div>
+        <div>
+        <a href="/feed/delete/<%=items.id %>" class=" mini ui button"> DELETE </a>
         </div>
         </div>
         </div>
