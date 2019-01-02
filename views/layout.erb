@@ -8,37 +8,54 @@
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 </head>
 <body>
 
-    <div class="ui container">
-    <br>
-      <h1> One More Set 4 Hi-Five! </h1>
-      <br>
-  
-      <% if @user %>
-      <a href="/logout" class="ui primary button">
-      Logout
-      </a>
-        <a href="/logout/delete/<%=@user.id %>" class="ui primary button">
-        Delete Account
-        </a>
-       
-        Welcome <%= @user.firstName %>
-      <% else %>
-        <a href="/login" class="ui primary button">
-          Login
-        </a>
-        <a href="/signup" class="ui primary button">
-          Sign Up
-        </a>
-        
-      <% end %>
+
+  <div class="ui top attached tabular menu">
+ <% if @user %>
+  <a class="active item" href="/logout">
+    Logout
+  </a>
+  <a class="item" href="/logout/delete/<%=@user.id %>">
+    Delete
+  </a>
+<% else %>
+  <a class="active item" href="/login">
+    Login
+  </a>
+  <a class="item" href="/signup">
+    Sign Up
+  </a>
+  <%end%>
+
+  <div class="right menu">
+    <div class="item">
+      <div class="ui input">
+        <input type="text" placeholder="Search users...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
       <br>
       <br>
 
       <%= yield %>
           </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+       <%= erb :"partials/footer" %> 
 
  <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"

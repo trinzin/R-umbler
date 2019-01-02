@@ -11,9 +11,13 @@ require 'csv'
 
 # Connect to a sqlite3 database
 # If you feel like you need to reset it, simply delete the file sqlite makes
-ActiveRecord::Base.establish_connection(
-  adapter: 'sqlite3',
-  database: 'db/development.db'
-)
+if ENV['DATABASE_URL']
+  ActiveRecord: :Base.establish_connection(ENV['DATABASE_URL'])
+else
+  ActiveRecord: :Base.establish_connection(
+    adapter: 'sqlite3',
+    database: 'db/development.db'
+  )
+end
 
 # do stuff to store initial data

@@ -1,22 +1,37 @@
 h1 {
   text-align: center;
   font-family: sans-serif;
+  color:#f2a61a;
+  
 }
 
 body{
-  background-image: url("/images/shine.webp" );
+  background-image: url("/images/warmup.jpeg");
   background-size: cover;
-}
+
 
 .ui button{
   position: relative;
   right:100px,
 }
 
+.active.item{
+background-color: coral;
+}
+
+
 h1{
   font-family: cursive;
 }
 
-h3{
-  color: red;
+.two.field{
+  background-color: blue;
+}
+
+.card{
+  text-align: center;
+}
+
+.field{
+  text-align: center;
 }

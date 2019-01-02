@@ -1,14 +1,124 @@
+<div class="ui link cards" 
+    style="
+    width: 915px;
+    text-align: center;
+    margin: 0;
+    margin-right: 0;
+    margin-left: 15%;
+">
+  <div class="card">
+    <div class="image">
+      <img src="/images/baseball.jpeg">
+    </div>
+    <div class="content">
+      <div class="header">Baseball</div>
+      <div class="meta">
+        <a>Friends</a>
+      </div>
+      <div class="description">
+        Bacon ipsum dolor amet sirloin shankle kevin ball
+         tip t-bone ham jowl buffalo pancetta bresaola 
+         landjaeger beef turkey fatback. Bresaola jerky
+          sausage tongue shoulder. Beef ribs t-bone cupim 
+          sausage rump meatloaf venison pork hamburger 
+          capicola tongue ribeye. Venison alcatra shoulder
+           filet mignon. Meatloaf rump hamburger spare ribs,
+            frankfurter cow shank turducken jerky swine ham 
+            hock tail tri-tip.
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        Joined in 2013
+      </span>
+      <span>
+        <i class="user icon"></i>
+        75 Friends
+      </span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image">
+      <img src="/images/dumpbell.jpeg">
+    </div>
+    <div class="content">
+      <div class="header">Gym</div>
+      <div class="meta">
+        <span class="date">Coworker</span>
+      </div>
+      <div class="description">
+        Bacon ipsum dolor amet sirloin shankle kevin ball
+         tip t-bone ham jowl buffalo pancetta bresaola 
+         landjaeger beef turkey fatback. Bresaola jerky
+          sausage tongue shoulder. Beef ribs t-bone cupim 
+          sausage rump meatloaf venison pork hamburger 
+          capicola tongue ribeye. Venison alcatra shoulder
+           filet mignon. Meatloaf rump hamburger spare ribs,
+            frankfurter cow shank turducken jerky swine ham 
+            hock tail tri-tip.
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        Joined in 2011
+      </span>
+      <span>
+        <i class="user icon"></i>
+        35 Friends
+      </span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="image">
+      <img src="/images/soccer.jpeg">
+    </div>
+    <div class="content">
+      <div class="header">Soccer</div>
+      <div class="meta">
+        <a>Coworker</a>
+      </div>
+      <div class="description">
+        Bacon ipsum dolor amet sirloin shankle kevin ball
+         tip t-bone ham jowl buffalo pancetta bresaola 
+         landjaeger beef turkey fatback. Bresaola jerky
+          sausage tongue shoulder. Beef ribs t-bone cupim 
+          sausage rump meatloaf venison pork hamburger 
+          capicola tongue ribeye. Venison alcatra shoulder
+           filet mignon. Meatloaf rump hamburger spare ribs,
+            frankfurter cow shank turducken jerky swine ham 
+            hock tail tri-tip.
+      </div>
+    </div>
+    <div class="extra content">
+      <span class="right floated">
+        Joined in 2014
+      </span>
+      <span>
+        <i class="user icon"></i>
+        151 Friends
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="ui star rating" data-rating="3"></div>
 
 
-<div class="ui form" >
+<div class="ui form">
     <form method="POST" action="/feed">
         <div class="field">
+        
             <label>Create Post</label>
-            <input type="textarea" name="content"></input>
+            <input style= "height:15vh; width:50%; type="textarea" name="content"></input>
         </div>
+        <div class="ui segment">
         <button class="positive ui button" type="submit">Post</button>
     </form>
+    </div>
 </div>
 
 
@@ -22,11 +132,13 @@
     </div>
     <div class="content">
       <div class="summary">
+      <div class="ui centered form">
         <a class="user">
         <%= items.user.firstName %>
         </a> created a post
         <div class="date">
             <%= Time.now %>
+        </div>
         </div>
         
       </div>
@@ -36,7 +148,7 @@
         
         <div class="meta">
         <a class="like">
-        <i class="like icon"></i> 4 Likes
+        <i class="like icon"></i> 8 Likes
         </a>
         </div>
         <div>
